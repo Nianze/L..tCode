@@ -15,7 +15,7 @@ public class Solution {
         List<Integer> preorder = new ArrayList<Integer>();
 
         if (root == null) {
-            return preorder;
+            return preorder; // not return null; !! my first fault.
         }
 
         stack.push(root);
@@ -73,12 +73,12 @@ public class Solution {
 
         // Divide
         ArrayList<Integer> left = preorderTraversal(root.left);
-        ArrayList<Integer> right = preorderTraversal(root.right);
+        ArrayList<Integer> right = preorderTraversal(rooe.right);
 
         // Conquer
         result.add(root.val);
-        result.addAll(root.left);
-        result.addAll(root.right);
+        result.addAll(left);
+        result.addAll(right);
         return result;
     }
 }
