@@ -28,7 +28,7 @@ public class Solution {
                 map.put(head, newNode);
             }
             
-            if (head.random != null) {
+            if (head.random != null) {  // special case !! must consider this
                 if (map.containsKey(head.random)) {
                     newNode.random = map.get(head.random);
                 } else {
