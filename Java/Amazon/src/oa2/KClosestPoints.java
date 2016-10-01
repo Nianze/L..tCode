@@ -12,24 +12,26 @@ public class KClosestPoints {
 	}	
 	
 	public Point[] Solution(Point[] A, Point origin, int k) { 
-		PriorityQueue<Point> heap = new PriorityQueue<Point>(k, new Comparator<Point>() {
+		PriorityQueue<Point> maxHeap = new PriorityQueue<Point>(k, new Comparator<Point>() {
 			@Override
 			public int compare (Point a, Point b) {
-				return (int) (distSquare(a, origin) - distSquare(b, origin));
+				return (int) (distSquare(b, origin) - distSquare(a, origin));
 			}
 		});
 		
 		for (int i = 0; i < A.length; i++) {
-			heap.offer(A[i]);
-			if (heap.size() > k) {
-				heap.poll();
-			} 				
+			if (maxHeap.size() < k) {
+				maxHeap.offer(A[i]);
+			} else if (distSquare(maxHeap.peek(), origin) > distSquare(A[i], origin)){
+				maxHeap.poll();
+				maxHeap.offer(A[i]);
+			}
 		}
 		
 		Point[] ans = new Point[k];
 		int index = 0;
-		while (!heap.isEmpty()) {
-			ans[index++] = heap.poll();
+		while (!maxHeap.isEmpty()) {
+			ans[index++] = maxHeap.poll();
 		}
 		return ans;
 	}

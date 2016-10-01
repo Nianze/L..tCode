@@ -12,7 +12,7 @@ public class OverlapRectangle {
 	
 	public static boolean check(Node topLeftA, Node topLeftB, Node bottomRightA, Node bottomRightB) {
 		// one is above the other
-		if (bottomRightA.y <= topLeftB.y || bottomRightB.y <= topLeftA.y) {
+		if (bottomRightA.y >= topLeftB.y || bottomRightB.y >= topLeftA.y) {
 			return false;
 		}
 		// one is beside the other
