@@ -16,7 +16,7 @@ public class Solution {
         }
         throw new IllegalArgumentException("No two sum solution");
     }
-    
+
     /* LeetCode Two Sum II
      * @param numbers : An sorted ascending array of Integer
      * @param target : target = numbers[index1] + numbers[index2]
@@ -34,7 +34,7 @@ public class Solution {
                 start++;
             }
             if ( sum > target) {
-                end --;
+                 end --;
             }
         }
         throw new IllegalArgumentException("No two sum solution");

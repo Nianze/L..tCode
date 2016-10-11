@@ -4,37 +4,24 @@ public class Solution {
      * @param b a number
      * @return the result
      */
+    // create string in loop: use stringbuilder!!
     public String addBinary(String a, String b) {
-        if (a.length() < b.length()) {
-            String temp = a;
-            a = b;
-            b = temp;
+        StringBuilder sb = new StringBuilder();
+        int i = a.length() -  1, j = b.length() - 1, carry = 0;
+        while (i >= 0 || j >= 0) {
+            int sum = carry;
+            if (i >= 0) {
+                sum += a.charAt(i--) - '0';
+            }
+            if (j >= 0) {
+                sum += b.charAt(j--) - '0';
+            }
+            sb.append(sum % 2);
+            carry = sum / 2;
         }
-
-        int pa = a.length() - 1;
-        int pb = b.length() - 1;
-        int carries = 0;
-        String ans = "";
-
-        while (pb >= 0) {
-            int sum = (a.charAt(pa) - '0') + (b.charAt(pb) - '0') + carries;
-            ans = String.valueOf(sum % 2) + ans;
-            carries = sum / 2;
-            pa --;
-            pb --;
+        if (carry != 0) {
+            sb.append(carry);
         }
-
-        while (pa >= 0) {
-            int sum = (int)(a.charAt(pa) - '0') + carries;
-            ans = String.valueOf(sum % 2) + ans;
-            carries = sum / 2;
-            pa --;
-        }
-
-        if (carries == 1) {
-            ans = "1" + ans;
-        }
-
-        return ans;
+        return sb.reverse().toString();
     }
 }
