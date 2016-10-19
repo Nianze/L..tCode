@@ -1,14 +1,16 @@
+// Created by Rym on 10.18/2016
+
 //1. How to optimize the algorithm if given array is sorted ?
 //2. Which algo is better if nums1's size is smaller ?
 //3. What if elements of nums2 are stored on disk and the memory is
 //  limited such that you cannot load all at once ?
 
 public class IntersectionOfTwoArraysII {
-    // Hashmap, for no dup case, use HashSet
+    // Hashmap
     // O(m+n), O(m)
     public int[] intersect(int[] nums1, int[] nums2) {
         List<Integer> buffer = new ArrayList<Integer>();
-        Map<Integer, Integer> map = HashMap<Integer, Integer>();        
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();        
         for (int num : nums1) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
@@ -21,6 +23,25 @@ public class IntersectionOfTwoArraysII {
         int[] ans = new int[buffer.size()];
         for (int i = 0; i < buffer.size(); i++) {
             ans[i] = buffer.get(i);
+        }
+        return ans;
+    }
+    // No dup case, use hashSet
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> set = new HashSet<Integer>();
+        Set<Integer> buf = new HashSet<Integer>();
+        for (int i : nums1) {
+            set.add(i);
+        }
+        for (int i : nums2) {
+            if (set.contains(i)) {
+                buf.add(i);
+            }
+        }
+        int i = 0;
+        int[] ans = new int[buf.size()];
+        for (int num : buf) {
+            ans[i++] = num;
         }
         return ans;
     }
@@ -52,6 +73,8 @@ public class IntersectionOfTwoArraysII {
     }
     
     // for small nums1: sort nums1 and use binary search. O(n*log(m))
+    // 如果找到了，一个元素，那就用这次的index作为下次binary search的开始。可以节约掉之前的东西，不用search了
+    // 如果找不到,也返回上次search 结束的index，然后下次接着search
     public int[] intersect(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         boolean[] check = new boolean[nums1.length];
