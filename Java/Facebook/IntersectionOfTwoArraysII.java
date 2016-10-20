@@ -1,4 +1,4 @@
-// Created by Rym on 10.18/2016
+// Created by Rym on 10/18/2016
 
 //1. How to optimize the algorithm if given array is sorted ?
 //2. Which algo is better if nums1's size is smaller ?

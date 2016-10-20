@@ -66,7 +66,7 @@ public class Solution {
                 public int compare (ListNode left, ListNode right) {
                     return left.val - right.val;
                 }                
-            };
+            });
             
         for (ListNode node : lists) {
             if (node != null) {
