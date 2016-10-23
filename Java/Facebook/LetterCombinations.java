@@ -1,4 +1,5 @@
 public class LetterCombinations {
+    // Use queue
     public List<String> letterCombinations(String digits) {
         LinkedList<String> ans = new LinkedList<String>();
         if (digits == null || digits.length() == 0) {
@@ -39,4 +40,20 @@ public class LetterCombinations {
     }
 
     // Recursive: similar to Combination of Number and map
+    public List<String> letterCombination(String digits) {
+        List<String> ans = new LinkedList<String>();
+        combination("", digits, 0, ans);
+        return ans;
+    }
+    private void combination(String prefix, String digits, int offset, List<String> ans) {
+        String[] map = {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        if (offset >= digits.length()) {
+            ans.add(prefix);
+            return;
+        }
+        String s = map[digits.charAt(offset) - '0'];
+        for (int i = 0; i < s.length(); i++) {
+            combination(prefix + s.charAt(i), digits, offset + 1, ans);
+        }
+    }
 }
