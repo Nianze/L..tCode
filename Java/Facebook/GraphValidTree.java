@@ -36,7 +36,7 @@ public class GraphValidTree {
     
     // BFS using deque
     // O(max(E,n)), space: O(n) for adjacency list
-    public validTree(int n, int[][] edges) {
+    public boolean validTree(int n, int[][] edges) {
         int[] visited = new int[n];
         List<List<Integer>> adjList = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -60,6 +60,8 @@ public class GraphValidTree {
             }
             visited[cur] = 2; // compete visiting
         }
+        for (int i : visited) { if (i == 0) { return false; } } // not single connected components
+        return true;
     }
     
     // union-find with compression and merge by rank
