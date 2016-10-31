@@ -98,3 +98,17 @@ I don't want to waste it on something I don't like, or something I am to regret 
 
 So I decided to fight for my future, with everything I have.
 Everything!
+
+## 10/30/2016
+
+## Stack vs. Deque
+javadoc:
+> ArrayDeque is likely to be faster than Stack when used as a stack, and faster
+than LinkedList when used as a queue.
+
+*Deque* exposes a set of operations which is all about being able to fetch/add/remove
+items from the start or end of a collection, iterate etc. There's deliverately
+no way to access an element by position, which *Stack* exposes because it's a
+subclass of *Vector*, making the *Stack* **inconsistent**.[1]
+
+[1]:http://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack
