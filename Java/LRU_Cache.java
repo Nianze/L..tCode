@@ -1,5 +1,4 @@
 public class LRUCache {
-
     private class Node{
         Node prev;
         Node next;
@@ -48,7 +47,7 @@ public class LRUCache {
     // @return nothing
     public void set(int key, int value) {
         if ( this.get(key) != -1) {
-            map.get(key).value = value;
+            map.get(key).value = value; // need to update and move to tail
             return;
         }
 
