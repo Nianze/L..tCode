@@ -1,5 +1,7 @@
 // Created by Rym on 11/08/2016
 public class MinimumWindowSubstring {
+    // Two pointer
+    // O(n), O(1)
     public String minWindow(String s, String t) {
         int[] map = new int[256];
         for (char c : t.toCharArray()) { map[c]++; }

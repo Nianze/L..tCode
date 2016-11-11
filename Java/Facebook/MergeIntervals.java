@@ -2,7 +2,7 @@
 import java.util.*;
 
 public class MergeIntervals {
-    // Definition for an interval.
+    // Definition for an interval
     public class Interval {
         int start;
         int end;
