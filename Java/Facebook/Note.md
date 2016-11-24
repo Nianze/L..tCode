@@ -1,114 +1,26 @@
-# Leetcode Notes
+FB onsite面试准备流程
 
-*In order to keep track of all the thoughts I've got during my practising
-Leetcode, I create this note to highlight all the points and experience.*
+1. 整理3个月所有考到的题目
+2. 刷并熟练高频题目，白板mock练习（tip:加入3110里面的invariant分析?）
+    1. 先熟悉高频面经题和lc带锁medium和hard题
+    2. 再熟悉lc普通medium题
+    3. 再熟悉少见的面经题
+3. 整理总结behavior question
+4. 调整作息，严格按照弯曲时间作息，保证7小时睡眠，每晚3点入睡10点起床，保证湾区时间早上9：30 ~ 13：00时处于亢奋状态（对应纽约州时间是12~16点）
 
-## ** 10/29/2016 ** ##
-### Thoughts on Binary Search from H-Index###
-1. Remember always to include trivial test case at first place:
-```java
-if (nums == null || nums.length == 0) {return 0;}
-```
+【经验】
+策略：写题够熟练，一遍就过，bug free
+方法：先写例子解释思路，然后秒写代码，最后再用例子demo
+挂人的原因：code clearness， number of bug， time to reach solution.
+pass经验：做题时候两人的互动, 比如对思路的阐述, 努力抓住他给的提示, 有时候可以幽默一下, 不要搞得太严肃
 
-2. Remember to consider all the corner case at the end:
-```java
-if (start ??? target) {return ??;}
-if (end ??? target) {return ??;}
-return ???; // cornell case!
-```
-### Thoughts on mock interview ###
-I should think out loud and speack to my self and explain all my thoughts
-and algorithms to my self, just like there's an interviewer sitting in front
-of me.
-
-## Thoughts on ArrayDeque vs. LinkedList in Java ##
-* **Cons of Linked List**:
- * Linked structures are the worst structure to
-iterate with a cache miss on each element
- * have to allocating a node for each item to insert, which essentially
-involves JVM/OS and expensive
- * for pop() operation, it mark internal nodes eligible for garbage collection
-and that's more work behind the scene
-* **ArrayDeque**:
-  * if only need to add/remove of both ends, use ArrayDeque
-  * e.g.: when using BFS, consider ArrayDeque first.
-* **Linked List**:
-  * The only better operation of a linked list is **removing the current
-element** during iteration.
-  * Linked List supports null element
-
-## Thoughts on inner piece, and why CS/Tech ##
-
-I have to admit, I am kind of tired. Tired the getting up early. Tired
-about thinking for my future, tired about knowing who I am. And tired about
-thinking up who I used to be.
-
-But just now, suddenly, after reading an Harvard Law PhD's post on Zhihu,
-it occurred to me that, to forget is to betray.
-
-Why I choose to be here? Why I want to become a programmer?
-
-The answer, which I forget, is actually very simple.
-
-I used to think that coding is fun, considering coding as a fascinating job,
-which I could be working along for a whole day and still smile for any coding
-challenges. I used to think hackers are so cool, who are able to dig out all
-the untoldable information hidden in the internet and get some first-hand
-knowledge, predicting the trend of the world. I used to dream to be a creator,
-using my own skills and knowledge to create complex machine.
-
-And what about now? All these thoughts are gone. I forget them all, with only one
-thing left behind: I know I have to prepare for the interview, or I will become
-a free man without any job. I do not want to be a jobless man. But I can not
-control myself to fight for my dream, eighter. Recently, I can not get up
-early enough to do the coding challenge, because every night when I go to bed,
-it usually is 5:00am in the morning already. I'm afraid of being jobless,
-and have a lot of pressure deep in my heart, so somehow I choose to escape.
-
-I know this is not a good atitude toward life. But I just can't help. So I
-write down all of this into this note, somehow hoping that expressing
-myself may relief my mind and make things better.
-
-Human beings are emotional animals. For a long time, without reading any
-literary book or watching any deep-thought movie, my mind becomes barren and
-torpid. So these days I just buried myself into entertainment videos, somehow
-relieved my mind by escaping the cold reality. But time flies, unstoppable.
-The deadline will always come, no sooner, no later.
-
-I know it's not a good time to escape any more. I know it's time to fight. With
-all my effort. I should firstly let myself know, why the hell I really
-want to do the job?
-
-For money? For living? For anyone else also choose to be?
-No, they are add-ons. They are never my initial intention.
-
-I choose to be so, because I really think this is a good career that worth my
-fighting for a life long time. I do like to **dig out** how things functioning
-under the surface. I do want to **create** something big and elegant. I do like
-a **freedom** lifestyle. Those are my believes. After searching for all the jobs,
-I've found that coding is a really good fit: I can learn how every thing
-inside the internet works and influence every one's life; I can create elegant
-code that make big impact to people with just a laptop and an editor; I can
-live in a wonderful lifestyle with so much freedom and schedule my time to
-learn everything I get interested about in my spare time.
-
-All of this, is exactly how I can dream about for an ideal job and ideal lifestyle.
-All I care about is that I can live with passion and fun. Life is so short,
-I don't want to waste it on something I don't like, or something I am to regret about.
-
-So I decided to fight for my future, with everything I have.
-Everything!
-
-## 10/30/2016
-
-## Stack vs. Deque
-javadoc:
-> ArrayDeque is likely to be faster than Stack when used as a stack, and faster
-than LinkedList when used as a queue.
-
-*Deque* exposes a set of operations which is all about being able to fetch/add/remove
-items from the start or end of a collection, iterate etc. There's deliverately
-no way to access an element by position, which *Stack* exposes because it's a
-subclass of *Vector*, making the *Stack* **inconsistent**.[1]
-
-[1]:http://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack
+schedule:
+9:15a - arrive and sign in with building 17
+9:30a - welcome 
+10:00a - interview #1
+10:50a - interview #2
+11:40a - interview #3
+12:30p – lunch *
+1:15p – q&a panel
+1:45p – oculus/tour
+2:45p – closing
