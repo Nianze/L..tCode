@@ -52,13 +52,13 @@ public class Solution {
             });
         heap.offer(intervals[0]);
         for (int i = 1; i < intervals.length; i++) {
-            Interval ealiestEnd = heap.poll();
-            if (ealiestEnd.end <= intervals[i].start) {
-                ealiestEnd.end = intervals[i].end;
+            Interval earliestEnd = heap.poll();
+            if (earliestEnd.end <= intervals[i].start) {
+                earliestEnd.end = intervals[i].end;
             } else {
                 heap.offer(intervals[i]);
             }
-            heap.offer(ealiestEnd);
+            heap.offer(earliestEnd);
         }
         return heap.size();
     }

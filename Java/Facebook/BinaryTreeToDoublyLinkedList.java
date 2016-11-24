@@ -8,7 +8,6 @@ class Node {
     }
 }
 
-
 public class BinaryTreeToDoublyLinkedList {
     Node head;
     static Node prev = null;
@@ -25,7 +24,7 @@ public class BinaryTreeToDoublyLinkedList {
         bt2DLL(root.right);
     }
     // this will create a circular doubly linked list without static prev node
-    void bt2CircularDLL(Node root, Node prev, Node head) {
+    void bt2CircularDLL(Node root, Node& prev, Node& head) { 
         if (root == null) return;
         bt2CircularDLL(root.left, prev, head);
         if (prev == null) head = root;

@@ -1,5 +1,6 @@
 // Created by Rym on 11/14/2016
 import java.util.*;
+
 class task_with_cooldown{
     public static int min_time(int[] tasks, int interval){
         if(tasks == null || tasks.length == 0){
@@ -43,14 +44,6 @@ class task_with_cooldown{
     //    time: O(klog(n)), where k is the number of task kinds, space: O(n)
 
     // Method one:
-    class DummyEntry<K, V> implements Map.Entry<K, V> {
-        private K key;
-        private V value;
-        public MyEntry(K key, V value) {
-            this.key = key;
-            this.value = value;
-        }
-    }
     public int schedule(int[] tasks, int cooldown) {
         HashMap<Integer, Integer> freqMap = new HashMap<>();
         for (int t : tasks) {
