@@ -5,7 +5,7 @@ public class Solution {
      */
     public String longestPalindrome(String s) {
         int max = 0, idx = 0;
-        for (int i = 0; i < s.length; i++)  {
+        for (int i = 0; i < s.length(); i++)  {
             int len1 = explore(s, i, i), len2 = explore(s, i, i + 1);
             int temp = Math.max(len1, len2);
             if ( max < temp ) {

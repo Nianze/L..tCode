@@ -1,3 +1,4 @@
+
 // Created by Rym on 10/16/2016
 public class NumberOfIslands {
     // Follow up:
@@ -32,4 +33,11 @@ public class NumberOfIslands {
         DFSMarking(grid, i, j + 1);
         DFSMarking(grid, i, j - 1);
     }
+
+    // BFS
+    // https://discuss.leetcode.com/topic/16546/java-dfs-and-bfs-solution/2
+    
+    // Union find
+    // https://discuss.leetcode.com/topic/39980/1d-union-find-java-solution-easily-generalized-to-other-problems
+    
 }

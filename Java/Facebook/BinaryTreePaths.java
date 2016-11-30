@@ -1,7 +1,9 @@
 // Created by Rym on 10/18/2016
 public class BinaryTreePaths {
     // recursive + iterative
-    // Follow up: 如果node 里面value 类型不确定,怎么打印
+    // Follow up: 如果node 里面value 类型不确定,怎么打印:
+    //  用StringBuilder append() to load int, char, long, object type value
+
     // Recursive
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> list = new ArrayList<>();
@@ -20,6 +22,7 @@ public class BinaryTreePaths {
         }
         return list;        
     }
+    
     // helper class
     class Wrapper {
         TreeNode node;

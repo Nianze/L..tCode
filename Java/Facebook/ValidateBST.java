@@ -20,6 +20,7 @@ public class ValidateBST {
         }
         return true;
     }
+    
     // recursive
     public boolean isValidBST(TreeNode root) {
         return helper(root, Long.MAX_VALUE, Long.MIN_VALUE);

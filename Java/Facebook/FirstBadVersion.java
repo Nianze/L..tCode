@@ -17,4 +17,7 @@ public class FirstBadVersion extends VersionControl {
         }
         return end;       
     }
+
+    // recursive way?
+    
 }
