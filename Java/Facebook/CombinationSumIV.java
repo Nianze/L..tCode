@@ -26,4 +26,11 @@ public class CombinationSumIV {
         }
         return comb[target];
     }
+
+    // follow up: for what if negative numbers are allowed?
+    // ans: it will cause infinite loop and infinite answers.
+    // e.g.: given {-1,1}, target = 1, then {1}, {1,1,-1},{1,1,1,-1,-1},... 
+    // add requirement: each number should only be used once, or either positive 
+    // or negative number should be used only one time, or the length of the combination sum be restricted
+    // refer: 
 }

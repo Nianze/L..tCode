@@ -2,14 +2,14 @@
 public class KthLargestElement {
     // O(NlgK) running time + O(K) memory
     public int findKthLargest(int[] nums, int k) {
-    PriorityQueue<Integer> pq = new PriorityQueue<>();
-    for(int val : nums) {
-        pq.offer(val);
-        if(pq.size() > k) {
-            pq.poll();
+        PriorityQueue<Integer> pq = new PriorityQueue<>();//new PriorityQueue<>(10, Collections.reverseOrder());
+        for(int val : nums) {
+            pq.offer(val);
+            if(pq.size() > k) {
+                pq.poll();
+            }
         }
-    }
-    return pq.peek();
+        return pq.peek();
     }
 
     // O(N) best case, O(N^2) worst case running time, O(1) memory
@@ -22,11 +22,11 @@ public class KthLargestElement {
         int pivot = arr[(left + right) / 2];
         int orgL = left, orgR = right;
         while(left <= right){
-            // 从右向左找到第一个小于枢纽值的数
+            // 从左向右找到第一个小于枢纽值的数
             while(arr[left] > pivot){
                 left ++;
             }
-            // 从左向右找到第一个大于枢纽值的数
+            // 从右向左找到第一个大于枢纽值的数
             while(arr[right] < pivot){
                 right --;
             }

@@ -17,6 +17,6 @@ public class FindTheCelebrity extends Relation {
                 return -1;
             }
         }
-        retur candidate;
+        return candidate;
     }
 }

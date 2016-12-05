@@ -39,6 +39,19 @@ public class MaximalRectangle {
         }
         return ans;
     }
+    /**
+    e.g.:
+    0 0 0 1 0 0 0 
+    0 0 1 1 1 0 0 
+    0 1 1 1 1 1 0
+
+    row 0:
+    l: 0 0 2 3 2 0 0
+    r: 7 7 5 4 5 7 7 
+    row 2:
+    l: 0 1 2 3 2 1 0
+    r: 7 6 5 4 5 6 7
+    */
 
     // dp + stack <-- from lc84 largest rectangle in histogram
     public int maximalRectangle(char[][] matrix) {

@@ -1,6 +1,6 @@
 // Created by Rym on 10/18/2016
 public class CombinationSum {
-    // Backtrack
+    // Backtrack, O(n*2^n)
     public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> list = new ArrayList<>();
         backtrack(list, new ArrayList<>(), nums, target, 0);

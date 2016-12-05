@@ -1,7 +1,6 @@
 // Created by Rym on 11/10/2016
 public class ClimbingStairs {
     public int climbStairs(int n) {
-    public int climbStairs(int n) {
         if (n == 1) return 1;
         if (n == 2) return 2;
         int[] dp = new int[3];
@@ -12,5 +11,4 @@ public class ClimbingStairs {
         }
         return dp[(n-1)%3];
     }        
-    }
 }

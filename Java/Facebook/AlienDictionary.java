@@ -1,5 +1,5 @@
 // Created by Rym on 11/13/2016
-// Filled by Rym on 11/25/2016
+// Completed by Rym on 11/25/2016
 public class AlienDictionary {
     // DFS
     // build the graph(post-adjacency list and visited list) -> dfs and check loop

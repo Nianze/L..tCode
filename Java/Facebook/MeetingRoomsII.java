@@ -62,4 +62,6 @@ public class Solution {
         }
         return heap.size();
     }
+    // follow up: output the time arrangement for each room:
+    // for (Interval i : heap) {...}
 }

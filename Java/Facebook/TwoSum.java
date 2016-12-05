@@ -16,23 +16,4 @@ public TwoSum {
         }
         return ans;
     }
-
-    // window based, not good! can not deal with this case: [3,2,4], t=7 
-    public int[] findSubarray(int nums[], int target) {
-        int sum = nums[0], start = 0;
-        int[] ans = {-1, -1};
-        for (int i = 1; i < nums.length; i++) {
-            while (sum > target && start < i) {
-                sum -= nums[start];
-                start++;
-            }
-            if (sum == target) {
-                ans[0] = start;
-                ans[1] = i;
-                return ans;
-            }
-            sum += nums[i];            
-        }
-        return ans;
-    }
 }

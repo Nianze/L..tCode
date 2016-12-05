@@ -18,7 +18,7 @@ public class Codec {
         build(sb, root);
         return sb.toString();
     }
-    // inorder recursive dfs
+    // preorder recursive dfs
     private void build(StringBuilder sb, TreeNode root) {
         if (root == null) {
             sb.append("#,");

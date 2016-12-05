@@ -30,5 +30,5 @@ public class HIndexII {
  * \
  *   \_ _ /  -> f(index) = citations[index]
  * /    \
- *        \  -> f(inded) = len - index
+ *        \  -> f(index) = len - index
  */

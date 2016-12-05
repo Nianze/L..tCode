@@ -1,5 +1,9 @@
 // Created by Rym on 10/18/2016
 public class MaximumSizeSubarraySumEqualsK {
+    // O(n)
+    // The HashMap stores the sum of all elements before index i as key, and i as value. 
+    // For each i, check not only the current sum but also (currentSum - previousSum) to see 
+    // if there is any that equals k, and update max length
     public int maxSubArrayLen(int[] nums, int k) {
         int sum = 0, max = 0;
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();

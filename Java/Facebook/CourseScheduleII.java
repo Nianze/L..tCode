@@ -2,7 +2,7 @@
 
 public class CourseScheduleII {
     // BFS
-    // note: adjList[i] points to list of all the succisive courses of course i
+    // note: adjList[i] points to list of all the succesive courses of course i
     public int[] findOrder(int numCourses, int[][] prerequisites) {
         List<List<Integer>> adjList = new ArrayList<>();
         int[] count = new int[numCourses];
@@ -25,7 +25,7 @@ public class CourseScheduleII {
                 if (count[succ] == 0) { queue.offer(succ); }
             }
         }
-        return index < numCourses ? new int[0] : ans;
+        return index < numCourses ? new int[0] : ans; // if has loop, empty ans.
     }
 
     // DFS
