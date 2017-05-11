@@ -73,6 +73,7 @@ public class Solution {
                 newNode.next = head.next;
             }
         }
+        return newHead;
     }
 
     public RandomListNode copyRandomListNode(RandomListNode head) {

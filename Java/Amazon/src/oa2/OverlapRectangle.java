@@ -9,8 +9,8 @@ public class OverlapRectangle {
 			y = b;
 		}
 	}
-	
-	public static boolean check(Node topLeftA, Node topLeftB, Node bottomRightA, Node bottomRightB) {
+
+	public static boolean isOverLap(Node topLeftA, Node topLeftB, Node bottomRightA, Node bottomRightB) {
 		// one is above the other
 		if (bottomRightA.y >= topLeftB.y || bottomRightB.y >= topLeftA.y) {
 			return false;
@@ -21,4 +21,14 @@ public class OverlapRectangle {
 		}
 		return true;
 	}
+
+    /*
+    int overlapRight = Math.min(Math.max(a, c), Math.max(e, g));
+    int overlapLeft = Math.max(Math.min(a, c), Math.min(e, g));
+    int overlapTop = Math.min(Math.max(b, d), Math.max(f, h));
+    int overlapBottom = Math.max(Math.min(b, d), Math.min(f, h));
+
+    return overlapRight > overlapLeft && overlapTop > overlapBottom;
+    */
+
 }
