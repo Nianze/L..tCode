@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/testgoogle.dir/main.cpp.o CMakeFiles/testgoogle.dir/testgoogle.cpp.o  -o testgoogle ../../google/liblibgoogle.a ../gtest/src/gtest-build/googlemock/gtest/libgtest.a ../gtest/src/gtest-build/googlemock/libgmock.a 

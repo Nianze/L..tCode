@@ -1,3 +1,3 @@
-# L..tCode
-A repo for my OJ exercises.
+# Algorithm Exercise
 
+> A repo for my algorithm exercises.

@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc liblibmgoogle.a  CMakeFiles/libmgoogle.dir/mgimplement.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib liblibmgoogle.a

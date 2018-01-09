@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../google/mgoogle.h
+
+/Users/lnz/Documents/MyGithub/L..tCode/Cpp/googlelib/mgimplement.cpp
+mgimplement.h
+/Users/lnz/Documents/MyGithub/L..tCode/Cpp/googlelib/mgimplement.h
+
+/Users/lnz/Documents/MyGithub/L..tCode/Cpp/googlelib/mgimplement.h
+mgoogle.h
+/Users/lnz/Documents/MyGithub/L..tCode/Cpp/googlelib/mgoogle.h
+
