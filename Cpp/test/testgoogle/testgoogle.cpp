@@ -35,11 +35,7 @@ TEST_F(GoogleTest, SometimesFooFalseIsTrue) {
 }
 
 TEST_F(GoogleTest, TwoSum) {
-//    Google google(m_google);
-    nums.push_back(2);
-    nums.push_back(3);
-    nums.push_back(11);
-    nums.push_back(15);
+    nums = {2, 3, 11, 15};
     int target = 9;
 
     std::vector<int> v = Google::twoSum(nums, target);
