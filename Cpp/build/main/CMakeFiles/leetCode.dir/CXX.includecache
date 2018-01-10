@@ -7,6 +7,12 @@
 #IncludeRegexTransform: 
 
 ../google/google.h
+string
+-
+vector
+-
+unordered_map
+-
 
 ../google/mgoogle.h
 

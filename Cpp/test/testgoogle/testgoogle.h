@@ -25,4 +25,7 @@ protected:
 
     // The mock bar library shaed by all tests
     MockGoogle m_google;
+
+    // For general purpose
+    std::vector<int> nums;
 };

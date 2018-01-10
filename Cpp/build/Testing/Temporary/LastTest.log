@@ -1,20 +1,15 @@
-Start testing: Jan 09 00:14 EST
+Start testing: Jan 10 00:33 EST
 ----------------------------------------------------------
 1/1 Testing: testgoogle
 1/1 Test: testgoogle
 Command: "/Users/lnz/Documents/MyGithub/L..tCode/Cpp/build/test/testgoogle/testgoogle"
 Directory: /Users/lnz/Documents/MyGithub/L..tCode/Cpp/build/test/testgoogle
-"testgoogle" start time: Jan 09 00:14 EST
+"testgoogle" start time: Jan 10 00:33 EST
 Output:
 ----------------------------------------------------------
-[==========] Running 4 tests from 2 test cases.
+[==========] Running 4 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 1 test from Array
-[ RUN      ] Array.TwoSum
-[       OK ] Array.TwoSum (0 ms)
-[----------] 1 test from Array (0 ms total)
-
-[----------] 3 tests from GoogleTest
+[----------] 4 tests from GoogleTest
 [ RUN      ] GoogleTest.ByDefaultFooTrueIsTrue
 
 GMOCK WARNING:
@@ -35,17 +30,19 @@ NOTE: You can safely ignore the above warning unless this call should not happen
 [       OK ] GoogleTest.ByDefaultFooFalseIsFalse (0 ms)
 [ RUN      ] GoogleTest.SometimesFooFalseIsTrue
 [       OK ] GoogleTest.SometimesFooFalseIsTrue (0 ms)
-[----------] 3 tests from GoogleTest (0 ms total)
+[ RUN      ] GoogleTest.TwoSum
+[       OK ] GoogleTest.TwoSum (0 ms)
+[----------] 4 tests from GoogleTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 4 tests from 2 test cases ran. (0 ms total)
+[==========] 4 tests from 1 test case ran. (0 ms total)
 [  PASSED  ] 4 tests.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"testgoogle" end time: Jan 09 00:14 EST
+"testgoogle" end time: Jan 10 00:33 EST
 "testgoogle" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jan 09 00:14 EST
+End testing: Jan 10 00:33 EST
