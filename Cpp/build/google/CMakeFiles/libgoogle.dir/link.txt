@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc liblibgoogle.a  CMakeFiles/libgoogle.dir/google.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib liblibgoogle.a
