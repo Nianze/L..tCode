@@ -1,5 +1,10 @@
+#ifndef INCLUDED_TESTGOOGLE
+#define INCLUDED_TESTGOOGLE
+
 #include "gtest/gtest.h"
 #include "mockgoogle.h"
+
+namespace LeetCode {
 
 // The fixture for testing class Foo.
 class GoogleTest : public ::testing::Test {
@@ -29,3 +34,7 @@ protected:
     // For general purpose
     std::vector<int> nums;
 };
+
+} // namespace LeetCode
+
+#endif

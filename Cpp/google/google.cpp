@@ -1,6 +1,8 @@
 #include "mgoogle.h"
 #include "google.h"
 
+namespace LeetCode {
+
 Google::Google(MGoogle& mgoogle)
     :m_google(mgoogle) {};
 
@@ -25,3 +27,19 @@ std::vector<int> Google::twoSum(std::vector<int>& nums, int target) {
 	}
 	return indices;
 }
+
+
+int Google::repeatedStringMatch(std::string A, std::string B) {
+	int repeatTimes = B.size() / A.size() + 1;
+	std::string C(A);
+	int i = repeatTimes;
+	while (i--) {
+		C.append(A);
+	}
+	if (-1 == C.find(B)) {
+		return -1;
+	}
+	return repeatTimes;
+}
+
+} // namespace LeetCode

@@ -1,6 +1,8 @@
 #include "google.h"
 #include "testgoogle.h"
 
+namespace LeetCode {
+
 using ::testing::Return;
 
 GoogleTest::GoogleTest() : nums() {
@@ -48,3 +50,12 @@ TEST_F(GoogleTest, TwoSum) {
     EXPECT_EQ(0, v[0]);
     EXPECT_EQ(4, v[1]);
 }
+
+TEST_F(GoogleTest, RepeatedStringMatch) {
+    std::string A("abcd");
+    std::string B("cdabcdab");
+
+    EXPECT_EQ(3, Google::repeatedStringMatch(A, B));
+}
+
+} // namespace LeetCode
