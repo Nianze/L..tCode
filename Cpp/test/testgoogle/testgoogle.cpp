@@ -39,12 +39,11 @@ TEST_F(GoogleTest, SometimesFooFalseIsTrue) {
 TEST_F(GoogleTest, TwoSum) {
     nums = {2, 3, 11, 15};
     int target = 9;
-
     std::vector<int> v = Google::twoSum(nums, target);
     EXPECT_EQ(true, v.empty());
-
     nums.push_back(7);
     nums.push_back(1);
+    // nums = {2, 3, 11, 15, 7, 1}
     v = Google::twoSum(nums, target);
     EXPECT_EQ(2, v.size());
     EXPECT_EQ(0, v[0]);
@@ -53,9 +52,15 @@ TEST_F(GoogleTest, TwoSum) {
 
 TEST_F(GoogleTest, RepeatedStringMatch) {
     std::string A("abcd");
+    std::string AA("abcdabcd");
     std::string B("cdabcdab");
-
+    std::string C("dabcdabcda");
+    EXPECT_EQ(2, Google::repeatedStringMatch(A, AA));
     EXPECT_EQ(3, Google::repeatedStringMatch(A, B));
+    EXPECT_EQ(1, Google::repeatedStringMatch(B, A));
+    EXPECT_EQ(4, Google::repeatedStringMatch(A, C));
+    EXPECT_EQ(-1, Google::repeatedStringMatch(C, B));
+    EXPECT_EQ(2, Google::repeatedStringMatch(B, C));
 }
 
 } // namespace LeetCode

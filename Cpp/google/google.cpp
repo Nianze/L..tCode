@@ -30,14 +30,18 @@ std::vector<int> Google::twoSum(std::vector<int>& nums, int target) {
 
 
 int Google::repeatedStringMatch(std::string A, std::string B) {
-	int repeatTimes = B.size() / A.size() + 1;
+	// divide and round up
+	int repeatTimes =(A.size() + B.size() - 1) / A.size();
 	std::string C(A);
-	int i = repeatTimes;
-	while (i--) {
+	int dupTimes = repeatTimes;
+	while (--dupTimes) {
 		C.append(A);
 	}
 	if (-1 == C.find(B)) {
-		return -1;
+		if (-1 == C.append(A).find(B)) {
+			return -1;
+		}
+		return repeatTimes + 1;
 	}
 	return repeatTimes;
 }
