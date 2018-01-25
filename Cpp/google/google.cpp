@@ -30,7 +30,11 @@ std::vector<int> Google::twoSum(std::vector<int>& nums, int target) {
 
 
 int Google::repeatedStringMatch(std::string A, std::string B) {
-	// divide and round up
+	// ad-hoc method
+	// time: O( N * (M+N) ), M = len(A), N = len(B), M+N = len(C)
+	// space: O(M + N), for creation of string C with possible size of len(A + B - 1)
+
+	// Ceil of len(B)/len(A)
 	int repeatTimes =(A.size() + B.size() - 1) / A.size();
 	std::string C(A);
 	int dupTimes = repeatTimes;
@@ -44,6 +48,8 @@ int Google::repeatedStringMatch(std::string A, std::string B) {
 		return repeatTimes + 1;
 	}
 	return repeatTimes;
+
+	// modified string find method
 }
 
 } // namespace LeetCode
